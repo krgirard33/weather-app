@@ -49,7 +49,7 @@ function init(resultFromServer) {
     }
 
     let weatherDescriptionHeader = document.getElementById('weatherDescriptionHeader');
-    let tempatureElement = document.getElementById('tempature');
+    let temperatureElement = document.getElementById('temperature');
     let humidityElement = document.getElementById('humidity');
     let windSpeedElement = document.getElementById('windSpeed');
     let cityHeader = document.getElementById('cityHeader');
@@ -59,7 +59,7 @@ function init(resultFromServer) {
 
     let resultDescription = resultFromServer.weather[0].description;
     weatherDescriptionHeader.innerText = resultDescription.charAt(0).toUpperCase() + resultDescription.slice(1);
-    tempatureElement.innerHTML = Math.floor(resultFromServer.main.temp) + '&#176';
+    temperatureElement.innerHTML = Math.floor(resultFromServer.main.temp) + '&#176';
     windSpeedElement.innerHTML = 'Winds at ' + Math.floor(resultFromServer.wind.speed) + ' m/s';
     cityHeader.innerHTML = resultFromServer.name;
     humidityElement.innerHTML = 'Humidity levels at ' + resultFromServer.main.humidity + '%';
